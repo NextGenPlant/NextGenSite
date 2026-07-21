@@ -1,0 +1,5 @@
+<ul class="wp-block-latest-posts__list wp-block-latest-posts">
+{%- for post in collections.news | limit(5) %}
+	<li><a class="wp-block-latest-posts__post-title" href="{{ post.url }}">{{ post.data.title }}</a></li>
+{%- endfor %}
+</ul>

@@ -1,0 +1,57 @@
+---
+layout: page.njk
+permalink: /news/
+title: News
+description: Read the latest news and views from Next Gen Plant Ltd.
+bodyClass: "blog wp-custom-logo wp-embed-responsive wp-theme-generatepress wp-child-theme-custom post-image-below-header post-image-aligned-left infinite-scroll sticky-menu-fade sticky-enabled desktop-sticky-menu right-sidebar nav-float-right one-container header-aligned-left dropdown-hover"
+bodySchema: Blog
+layoutSidebar: true
+---
+<div class="gb-container gb-container-f15f5f70 gb-container-hero-blog">
+	<div class="gb-container gb-container-327cd29e gb-container-hero-blog-inner">
+		<h1 class="gb-headline gb-headline-e0269c07 gb-headline-text gb-headline-heading-white">News</h1>
+	</div>
+</div>
+<div class="site grid-container container hfeed" id="page">
+	<div class="site-content" id="content">
+		<div class="content-area" id="primary">
+			<main class="site-main" id="main">
+				{%- for post in collections.news %}
+				<article class="post type-post status-publish format-standard has-post-thumbnail hentry infinite-scroll-item" itemtype="https://schema.org/CreativeWork" itemscope>
+					<div class="inside-article">
+						<header class="entry-header">
+							<h2 class="entry-title" itemprop="headline"><a href="{{ post.url }}" rel="bookmark">{{ post.data.title }}</a></h2>
+							<div class="entry-meta">
+								<span class="posted-on"><time class="entry-date published" datetime="{{ post.date | isoDate }}" itemprop="datePublished">{{ post.date | readableDate }}</time></span>
+							</div>
+						</header>
+						{% if post.data.image %}
+						<div class="post-image">
+							<a href="{{ post.url }}">
+								<img width="150" height="150" src="{{ post.data.image | thumb150 }}" class="attachment-150x150x1 size-150x150x1 wp-post-image" alt="{{ post.data.imageAlt or post.data.title }}" itemprop="image" decoding="async" srcset="{{ post.data.image | thumb150 }} 150w, {{ post.data.image | thumb300 }} 300w" sizes="(max-width: 150px) 100vw, 150px" />
+							</a>
+						</div>
+						{% endif %}
+						<div class="entry-summary" itemprop="text">
+							<p>{{ post.data.excerpt }}</p>
+						</div>
+						<footer class="entry-meta" aria-label="Entry meta">
+							<span class="cat-links"><span class="gp-icon icon-categories"><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M0 112c0-26.51 21.49-48 48-48h110.014a48 48 0 0143.592 27.907l12.349 26.791A16 16 0 00228.486 128H464c26.51 0 48 21.49 48 48v224c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V112z" /></svg></span><span class="screen-reader-text">Categories </span><a href="/news/" rel="category tag">What's New?</a></span>
+						</footer>
+					</div>
+				</article>
+				{%- endfor %}
+			</main>
+		</div>
+		<div class="widget-area sidebar is-right-sidebar" id="right-sidebar">
+			<div class="inside-right-sidebar">
+				<aside class="widget inner-padding widget_block">
+					<div class="gb-container gb-container-9d5baa6e">
+						<h4 class="gb-headline gb-headline-2a8be9b4 gb-headline-text widget-title">Recent Posts</h4>
+						{% include "recent-posts.njk" %}
+					</div>
+				</aside>
+			</div>
+		</div>
+	</div>
+</div>

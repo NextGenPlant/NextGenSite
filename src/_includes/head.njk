@@ -1,0 +1,51 @@
+<meta charset="UTF-8">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if site.name in title %}{{ title }}{% else %}{{ title }} | {{ site.name }}{% endif %}</title>
+{% if description %}<meta name="description" content="{{ description }}" />{% endif %}
+<link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+
+<link href="https://fonts.gstatic.com" crossorigin rel="preconnect" />
+<link href="https://fonts.googleapis.com" crossorigin rel="preconnect" />
+
+{% include "wp-inline-styles.njk" %}
+
+<link rel="stylesheet" href="/wp-content/themes/generatepress/assets/css/components/widget-areas.min.css%3Fver=3.5.1.css" media="all" />
+<link rel="stylesheet" href="/wp-content/themes/generatepress/assets/css/main.min.css%3Fver=3.5.1.css" media="all" />
+<style id="generate-style-inline-css">
+.is-right-sidebar{width:30%;}.is-left-sidebar{width:30%;}.site-content .content-area{width:{% if layoutSidebar %}70%{% else %}100%{% endif %};}@media (max-width: 960px){.main-navigation .menu-toggle,.sidebar-nav-mobile:not(#sticky-placeholder){display:block;}.main-navigation ul,.gen-sidebar-nav,.main-navigation:not(.slideout-navigation):not(.toggled) .main-nav > ul,.has-inline-mobile-toggle #site-navigation .inside-navigation > *:not(.navigation-search):not(.main-nav){display:none;}.nav-align-right .inside-navigation,.nav-align-center .inside-navigation{justify-content:space-between;}.has-inline-mobile-toggle .mobile-menu-control-wrapper{display:flex;flex-wrap:wrap;}.has-inline-mobile-toggle .inside-header{flex-direction:row;text-align:left;flex-wrap:wrap;}.has-inline-mobile-toggle .header-widget,.has-inline-mobile-toggle #site-navigation{flex-basis:100%;}.nav-float-left .has-inline-mobile-toggle #site-navigation{order:10;}}
+.dynamic-author-image-rounded{border-radius:100%;}.dynamic-featured-image, .dynamic-author-image{vertical-align:middle;}.one-container.blog .dynamic-content-template:not(:last-child), .one-container.archive .dynamic-content-template:not(:last-child){padding-bottom:0px;}.dynamic-entry-excerpt > p:last-child{margin-bottom:0px;}
+.gb-button, .gb-button:visited {
+			border: 0;
+			border-radius: 0;
+			font-weight: 600;
+			padding: 10px 20px;
+		}
+
+		.gb-button:hover, .gb-button:active, .gb-button:focus {
+			background-color: var(--brand-alt);
+		}
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,italic,500,500italic,700,700italic&amp;display=auto&amp;ver=3.5.1" media="all" />
+<link rel="stylesheet" href="/wp-content/uploads/generatepress/style.min.css%3Fver=1740683319.css" media="all" />
+{% if generateblocksCss %}
+<link rel="stylesheet" href="{{ generateblocksCss }}" media="all" />
+{% else %}
+{% include "generateblocks-shared.njk" %}
+{% endif %}
+{% if layoutSidebar %}
+<link rel="stylesheet" href="/wp-content/plugins/gp-premium/blog/functions/css/style.min.css%3Fver=2.5.1.css" media="all" />
+{% else %}
+<link rel="stylesheet" href="/wp-content/plugins/gp-premium/blog/functions/css/columns.min.css%3Fver=2.5.1.css" media="all" />
+{% endif %}
+<link rel="stylesheet" href="/wp-content/plugins/gp-premium/menu-plus/functions/css/offside.min.css%3Fver=2.5.1.css" media="all" />
+{% include "generate-offside-inline-css.njk" %}
+<link rel="stylesheet" href="/wp-content/plugins/gp-premium/menu-plus/functions/css/navigation-branding-flex.min.css%3Fver=2.5.1.css" media="all" />
+{% include "generate-navigation-branding-inline-css.njk" %}
+<link rel="stylesheet" href="/wp-content/themes/custom/build/css/style-min.css%3Fver=1.0.css" media="all" />
+{% if extraHead %}{{ extraHead | safe }}{% endif %}
+<script src="/wp-includes/js/jquery/jquery.min.js%3Fver=3.7.1"></script>
+<script src="/wp-includes/js/jquery/jquery-migrate.min.js%3Fver=3.4.1"></script>
+<link rel="icon" href="/wp-content/uploads/cropped-site-icon-32x32.png" sizes="32x32" />
+<link rel="icon" href="/wp-content/uploads/cropped-site-icon-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="/wp-content/uploads/cropped-site-icon-180x180.png" />
