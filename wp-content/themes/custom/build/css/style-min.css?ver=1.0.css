@@ -3,6 +3,62 @@
 
 /* General */
 
+.hero-brand-logo {
+	display: block;
+	height: auto;
+	margin: 1.25rem auto 0;
+	width: min(420px, 85%);
+}
+
+.home .gb-container-hero-bg-img {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	min-height: 100dvh;
+}
+
+.home .gb-container-hero-black-inner-front {
+	padding-bottom: 40px;
+	padding-top: 40px;
+	text-shadow: none;
+}
+
+/* Transparent topbar over homepage hero */
+.home .site-header {
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	transition: background-color 0.35s ease;
+	width: 100%;
+	z-index: 1000;
+}
+
+.home:not(.is-scrolled) .site-header {
+	background-color: transparent;
+}
+
+.home:not(.is-scrolled) .site-header .main-navigation,
+.home:not(.is-scrolled) .site-header .main-navigation.is_stuck {
+	background-color: transparent;
+	box-shadow: none;
+}
+
+.home .site-header .site-logo {
+	transition: opacity 0.35s ease, visibility 0.35s ease;
+}
+
+.home:not(.is-scrolled) .site-header .site-logo {
+	opacity: 0;
+	pointer-events: none;
+	visibility: hidden;
+}
+
+.home.is-scrolled .site-header {
+	background-color: var(--black);
+}
+
 hr {
 	margin: 0 0 1.5em;
 }

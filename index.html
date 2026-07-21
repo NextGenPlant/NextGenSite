@@ -1221,8 +1221,8 @@
 		<div
 			class="gb-container gb-container-hero-brand-inner-front-slide gb-container-hero-black-inner-front">
 
-			<h1 class="gb-headline gb-headline-139400a1 gb-headline-text gb-headline-heading-white">Welcome to Next Gen
-				Plant</h1>
+			<h1 class="gb-headline gb-headline-139400a1 gb-headline-text gb-headline-heading-white">WELCOME TO</h1>
+			<img class="hero-brand-logo" src="wp-content/uploads/logo-reverse.svg" alt="Next Gen Plant" width="399" height="74" />
 
 		</div>
 	</div>
@@ -1722,6 +1722,16 @@
 		src="wp-content/themes/generatepress/assets/js/back-to-top.min.js%3Fver=3.5.1"></script>
 <script id="generateblocks-accordion-js"
 		src="wp-content/plugins/generateblocks-pro/dist/accordion.js%3Fver=1.6.0"></script>
+	<script>
+		(function () {
+			var threshold = 24;
+			function updateHeader() {
+				document.body.classList.toggle("is-scrolled", window.scrollY > threshold);
+			}
+			updateHeader();
+			window.addEventListener("scroll", updateHeader, { passive: true });
+		})();
+	</script>
 </body>
 
 </html>
