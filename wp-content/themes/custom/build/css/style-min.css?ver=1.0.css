@@ -10,6 +10,34 @@
 	width: min(420px, 85%);
 }
 
+.inline-brand-logo {
+	display: inline-block;
+	height: 0.85em;
+	margin: 0 0.15em;
+	vertical-align: -0.05em;
+	width: auto;
+}
+
+.partner-logos {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem 3rem;
+	justify-content: center;
+	margin-bottom: 1.5em;
+}
+
+.partner-logos figure {
+	margin: 0;
+}
+
+.partner-logos img {
+	display: block;
+	height: 60px;
+	object-fit: contain;
+	width: auto;
+}
+
 .home .gb-container-hero-bg-img {
 	display: flex;
 	align-items: center;
