@@ -681,5 +681,35 @@ button.gb-button-acc-btn-brand:hover {
 
 }
 
+/* News listing thumbnails — fixed square, crop (no stretch)
+--------------------------------------------- */
+
+body.blog .post-image img.wp-post-image {
+	width: 150px;
+	height: 150px;
+	max-width: 150px;
+	object-fit: cover;
+	object-position: center;
+}
+
+/* Single post back link
+--------------------------------------------- */
+
+.post-back {
+	margin: 0 0 1.25rem;
+}
+
+.post-back a {
+	color: var(--brand);
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.post-back a:hover,
+.post-back a:focus {
+	color: var(--brand-alt);
+	text-decoration: underline;
+}
+
 /* DC drop
 --------------------------------------------- */

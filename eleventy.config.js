@@ -1,7 +1,22 @@
+const fs = require("fs");
+const path = require("path");
+
+function sizedImage(imagePath, size) {
+  if (!imagePath) return "";
+  if (/^https?:\/\//i.test(imagePath)) return imagePath;
+
+  const sized = imagePath.replace(/(\.[^.]+)$/, `-${size}$1`);
+  const localPath = path.join(__dirname, sized.replace(/^\//, ""));
+  if (fs.existsSync(localPath)) return sized;
+
+  return imagePath;
+}
+
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     "wp-content": "wp-content",
     "wp-includes": "wp-includes",
+    admin: "admin",
     CNAME: "CNAME",
     "src/robots.txt": "robots.txt",
   });
@@ -26,15 +41,9 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter("limit", (arr, n) => (arr || []).slice(0, n));
 
-  eleventyConfig.addFilter("thumb150", (imagePath) => {
-    if (!imagePath) return "";
-    return imagePath.replace(/(\.[^.]+)$/, "-150x150$1");
-  });
+  eleventyConfig.addFilter("thumb150", (imagePath) => sizedImage(imagePath, "150x150"));
 
-  eleventyConfig.addFilter("thumb300", (imagePath) => {
-    if (!imagePath) return "";
-    return imagePath.replace(/(\.[^.]+)$/, "-300x300$1");
-  });
+  eleventyConfig.addFilter("thumb300", (imagePath) => sizedImage(imagePath, "300x300"));
 
   return {
     dir: {
