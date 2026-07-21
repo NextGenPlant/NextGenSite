@@ -283,41 +283,6 @@ a.generate-back-to-top {
 /* Plugins
 --------------------------------------------- */
 
-/* Cookie Consent
---------------------------------------------- */
-
-#catapult-cookie-bar {
-    background-color: rgba(0, 0, 0, 0.85) !important;
-	color: var(--white);
-	font-size: 15px;
-	padding: 15px 30px;
-	z-index: 99999999;
-}
-
-#catapult-cookie-bar a {
-	color: var(--white);
-	font-weight: bold;	
-}
-
-#catapult-cookie-bar a:focus,
-#catapult-cookie-bar a:hover {
-	color: var(--grey-4);
-}
-
-button#catapultCookie {
-	background-color: var(--brand);
-	border-radius: 0 !important;
-	color: var(--white);
-	font-size: 15px;
-	padding: 10px 15px !important;
-}
-
-button#catapultCookie:focus,
-button#catapultCookie:hover {
-	background-color: var(--brand-alt);
-	color: var(--white);
-}
-
 /* Gravity Forms */
 
 /* Wrapper */
