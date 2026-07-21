@@ -10,6 +10,78 @@
 	width: min(420px, 85%);
 }
 
+.hero-scroll-cue {
+	align-items: center;
+	bottom: 1.75rem;
+	color: var(--white);
+	display: flex;
+	flex-direction: column;
+	gap: 0.65rem;
+	left: 50%;
+	opacity: 0;
+	pointer-events: none;
+	position: absolute;
+	transform: translateX(-50%);
+	transition: opacity 0.35s ease, visibility 0.35s ease;
+	visibility: hidden;
+	z-index: 2;
+}
+
+.home.hero-scroll-ready:not(.is-scrolled) .hero-scroll-cue {
+	opacity: 0.85;
+	visibility: visible;
+}
+
+.hero-scroll-cue__label {
+	font-size: 0.8rem;
+	font-weight: 600;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+}
+
+.hero-scroll-cue__arrows {
+	display: block;
+	height: 14px;
+	position: relative;
+	width: 22px;
+}
+
+.hero-scroll-cue__arrows::before,
+.hero-scroll-cue__arrows::after {
+	border-bottom: 2px solid currentColor;
+	border-right: 2px solid currentColor;
+	content: "";
+	height: 10px;
+	left: 50%;
+	position: absolute;
+	top: 0;
+	transform: translateX(-50%) rotate(45deg);
+	width: 10px;
+}
+
+.hero-scroll-cue__arrows::after {
+	top: 6px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.hero-scroll-cue__arrows {
+		animation: hero-scroll-bounce 1.6s ease-in-out infinite;
+	}
+}
+
+@keyframes hero-scroll-bounce {
+	0%,
+	100% {
+		opacity: 0.45;
+		transform: translateY(0);
+	}
+
+	50% {
+		opacity: 1;
+		transform: translateY(6px);
+	}
+}
+
 .inline-brand-logo {
 	display: inline-block;
 	height: 0.85em;
@@ -39,11 +111,12 @@
 }
 
 .home .gb-container-hero-bg-img {
-	display: flex;
 	align-items: center;
+	display: flex;
 	justify-content: center;
 	min-height: 100vh;
 	min-height: 100dvh;
+	position: relative;
 }
 
 .home .gb-container-hero-black-inner-front {
