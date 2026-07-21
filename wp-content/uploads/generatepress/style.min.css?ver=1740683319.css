@@ -69,8 +69,8 @@ a:active {
 }
 
 :root {
-    --brand: #00afd7;
-    --brand-alt: #40c3e1;
+    --brand: #68CEF6;
+    --brand-alt: #2d98c2;
     --brand-tint: #e5f7fb;
     --black: #101011;
     --grey: #323232;
@@ -241,7 +241,13 @@ button.menu-toggle:focus {
 }
 
 .main-navigation .main-nav ul li[class*="current-menu-"]>a {
-    color: #FFFFFF;
+    color: var(--brand);
+}
+
+.main-navigation .main-nav ul li[class*="current-menu-"]:hover>a,
+.main-navigation .main-nav ul li[class*="current-menu-"]:focus>a,
+.main-navigation .main-nav ul li.sfHover[class*="current-menu-"]>a {
+    color: var(--brand);
 }
 
 .navigation-search input[type="search"],

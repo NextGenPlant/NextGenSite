@@ -239,6 +239,17 @@ select {
 	text-transform: uppercase;
 }
 
+.main-navigation .main-nav ul li[class*="current-menu-"] > a,
+.main-navigation .main-nav ul li[class*="current-menu-"]:hover > a,
+.main-navigation .main-nav ul li[class*="current-menu-"]:focus > a,
+.main-navigation .main-nav ul li.sfHover[class*="current-menu-"] > a,
+.slideout-navigation.main-navigation .main-nav ul li[class*="current-menu-"] > a,
+.slideout-navigation.main-navigation .main-nav ul li[class*="current-menu-"]:hover > a,
+.slideout-navigation.main-navigation .main-nav ul li[class*="current-menu-"]:focus > a,
+.slideout-navigation.main-navigation .main-nav ul li.sfHover[class*="current-menu-"] > a {
+	color: var(--brand);
+}
+
 .main-navigation ul ul {
 	box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.05);
 }
