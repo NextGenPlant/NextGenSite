@@ -1,1 +1,0 @@
-!function(){"use strict";const e=document.querySelectorAll(".animate-fade-in"),t=new IntersectionObserver((function(e){e.forEach((e=>{e.isIntersecting?e.target.classList.add("inview"):e.target.classList.remove("inview")}))}));for(let n=0;n<e.length;n++)t.observe(e[n])}();
