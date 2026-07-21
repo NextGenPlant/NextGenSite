@@ -168,6 +168,67 @@ html:not(.mobile-menu-open) body.home.hero-scroll-ready:not(.is-scrolled) .hero-
 	width: auto;
 }
 
+/* Inline when wide enough; otherwise stack THE / logo / ADVANTAGE */
+.gb-container-866547ae {
+	container-name: advantage-panel;
+	container-type: inline-size;
+}
+
+.advantage-title {
+	align-items: baseline;
+	column-gap: 0.35em;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	line-height: 1;
+}
+
+.advantage-title__part {
+	flex: 0 0 auto;
+}
+
+.advantage-title__part .inline-brand-logo {
+	display: block;
+	flex-shrink: 0;
+	/* SVG letters fill the viewBox — match text cap-height */
+	height: 1cap;
+	margin: 0;
+	width: calc(1cap * 399 / 40);
+}
+
+@container advantage-panel (max-width: 30rem) {
+	.advantage-title {
+		align-items: center;
+		flex-direction: column;
+		row-gap: 0.15em;
+	}
+}
+
+@media (max-width: 767px) {
+	.gb-container-866547ae {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+
+	/* Keep icon + text as one centered group when the copy wraps */
+	.gb-container-866547ae .gb-headline-heading-icon {
+		justify-content: flex-start;
+		margin-inline: auto;
+		max-width: 20rem;
+		text-align: left;
+		width: fit-content;
+	}
+
+	.gb-container-866547ae .gb-headline-heading-icon .gb-icon {
+		flex-shrink: 0;
+	}
+
+	.gb-container-866547ae .gb-headline-heading-icon .gb-headline-text {
+		min-width: 0;
+	}
+}
+
 .partner-logos {
 	align-items: center;
 	display: flex;
