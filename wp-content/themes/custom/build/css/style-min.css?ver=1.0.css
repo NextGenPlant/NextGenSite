@@ -306,6 +306,17 @@ a.generate-back-to-top {
 	margin-bottom: 1em;
 }
 
+button.gb-button-acc-btn-brand:active,
+button.gb-button-acc-btn-brand:focus {
+	background-color: var(--brand);
+	color: var(--white);
+}
+
+button.gb-button-acc-btn-brand:hover {
+	background-color: var(--brand-alt);
+	color: var(--white);
+}
+
 /* Hero headlines */
 
 .single .gb-container-hero-brand-3-blog h1.gb-headline-text,
