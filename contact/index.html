@@ -2,10 +2,6 @@
 <html lang="en-GB">
 <head>
 	<meta charset="UTF-8">
-<script>
-var gform;gform||(document.addEventListener("gform_main_scripts_loaded",function(){gform.scriptsLoaded=!0}),document.addEventListener("gform/theme/scripts_loaded",function(){gform.themeScriptsLoaded=!0}),window.addEventListener("DOMContentLoaded",function(){gform.domLoaded=!0}),gform={domLoaded:!1,scriptsLoaded:!1,themeScriptsLoaded:!1,isFormEditor:()=>"function"==typeof InitializeEditor,callIfLoaded:function(o){return!(!gform.domLoaded||!gform.scriptsLoaded||!gform.themeScriptsLoaded&&!gform.isFormEditor()||(gform.isFormEditor()&&console.warn("The use of gform.initializeOnLoaded() is deprecated in the form editor context and will be removed in Gravity Forms 3.1."),o(),0))},initializeOnLoaded:function(o){gform.callIfLoaded(o)||(document.addEventListener("gform_main_scripts_loaded",()=>{gform.scriptsLoaded=!0,gform.callIfLoaded(o)}),document.addEventListener("gform/theme/scripts_loaded",()=>{gform.themeScriptsLoaded=!0,gform.callIfLoaded(o)}),window.addEventListener("DOMContentLoaded",()=>{gform.domLoaded=!0,gform.callIfLoaded(o)}))},hooks:{action:{},filter:{}},addAction:function(o,r,e,t){gform.addHook("action",o,r,e,t)},addFilter:function(o,r,e,t){gform.addHook("filter",o,r,e,t)},doAction:function(o){gform.doHook("action",o,arguments)},applyFilters:function(o){return gform.doHook("filter",o,arguments)},removeAction:function(o,r){gform.removeHook("action",o,r)},removeFilter:function(o,r,e){gform.removeHook("filter",o,r,e)},addHook:function(o,r,e,t,n){null==gform.hooks[o][r]&&(gform.hooks[o][r]=[]);var d=gform.hooks[o][r];null==n&&(n=r+"_"+d.length),gform.hooks[o][r].push({tag:n,callable:e,priority:t=null==t?10:t})},doHook:function(r,o,e){var t;if(e=Array.prototype.slice.call(e,1),null!=gform.hooks[r][o]&&((o=gform.hooks[r][o]).sort(function(o,r){return o.priority-r.priority}),o.forEach(function(o){"function"!=typeof(t=o.callable)&&(t=window[t]),"action"==r?t.apply(null,e):e[0]=t.apply(null,e)})),"filter"==r)return e[0]},removeHook:function(o,r,t,n){var e;null!=gform.hooks[o][r]&&(e=(e=gform.hooks[o][r]).filter(function(o,r,e){return!!(null!=n&&n!=o.tag||null!=t&&t!=o.priority)}),gform.hooks[o][r]=e)}});
-</script>
-
 	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- This site is optimized with the Yoast SEO plugin v27.0 - https://yoast.com/product/yoast-seo-wordpress/ -->
@@ -15,7 +11,7 @@ var gform;gform||(document.addEventListener("gform_main_scripts_loaded",function
 	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.nextgenplant.co.uk/contact/","url":"https://www.nextgenplant.co.uk/contact/","name":"Contact | Next Gen Plant","isPartOf":{"@id":"https://www.nextgenplant.co.uk/#website"},"primaryImageOfPage":{"@id":"https://www.nextgenplant.co.uk/contact/#primaryimage"},"image":{"@id":"https://www.nextgenplant.co.uk/contact/#primaryimage"},"thumbnailUrl":"https://www.nextgenplant.co.uk/wp-content/uploads/hero-contact.jpg","datePublished":"2024-04-23T19:42:37+00:00","dateModified":"2024-05-27T10:14:02+00:00","description":"Contact Next Gen Plant Ltd.","breadcrumb":{"@id":"https://www.nextgenplant.co.uk/contact/#breadcrumb"},"inLanguage":"en-GB","potentialAction":[{"@type":"ReadAction","target":["https://www.nextgenplant.co.uk/contact/"]}]},{"@type":"ImageObject","inLanguage":"en-GB","@id":"https://www.nextgenplant.co.uk/contact/#primaryimage","url":"https://www.nextgenplant.co.uk/wp-content/uploads/hero-contact.jpg","contentUrl":"https://www.nextgenplant.co.uk/wp-content/uploads/hero-contact.jpg","width":2400,"height":1000,"caption":"Contact Next Gen Plant Ltd"},{"@type":"BreadcrumbList","@id":"https://www.nextgenplant.co.uk/contact/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.nextgenplant.co.uk/"},{"@type":"ListItem","position":2,"name":"Contact"}]},{"@type":"WebSite","@id":"https://www.nextgenplant.co.uk/#website","url":"https://www.nextgenplant.co.uk/","name":"Next Gen Plant","description":"Machine Control Installation | Support | Repairs","publisher":{"@id":"https://www.nextgenplant.co.uk/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.nextgenplant.co.uk/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-GB"},{"@type":"Organization","@id":"https://www.nextgenplant.co.uk/#organization","name":"Next Gen Plant","url":"https://www.nextgenplant.co.uk/","logo":{"@type":"ImageObject","inLanguage":"en-GB","@id":"https://www.nextgenplant.co.uk/#/schema/logo/image/","url":"https://www.nextgenplant.co.uk/wp-content/uploads/logo-reverse.svg","contentUrl":"https://www.nextgenplant.co.uk/wp-content/uploads/logo-reverse.svg","width":1,"height":1,"caption":"Next Gen Plant"},"image":{"@id":"https://www.nextgenplant.co.uk/#/schema/logo/image/"}}]}</script>
 	<!-- / Yoast SEO plugin. -->
 
-<link rel='dns-prefetch' href='https://www.google.com/' /><link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+<link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
 <link href='https://fonts.googleapis.com' crossorigin rel='preconnect' />
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -71,9 +67,6 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 /*# sourceURL=generate-style-inline-css */
 </style>
 <link rel='stylesheet' id='generate-google-fonts-css' href='https://fonts.googleapis.com/css?family=Roboto:regular,italic,500,500italic,700,700italic&#038;display=auto&#038;ver=3.5.1' media='all' />
-<link rel='stylesheet' id='gform_basic-css' href='../wp-content/plugins/gravityforms/assets/css/dist/basic.min.css%3Fver=2.10.5.css' media='all' />
-<link rel='stylesheet' id='gform_theme_components-css' href='../wp-content/plugins/gravityforms/assets/css/dist/theme-components.min.css%3Fver=2.10.5.css' media='all' />
-<link rel='stylesheet' id='gform_theme-css' href='../wp-content/plugins/gravityforms/assets/css/dist/theme.min.css%3Fver=2.10.5.css' media='all' />
 <link rel='stylesheet' id='generatepress-dynamic-css' href='../wp-content/uploads/generatepress/style.min.css%3Fver=1740683319.css' media='all' />
 <link rel='stylesheet' id='generateblocks-css' href='../wp-content/uploads/generateblocks/style-1288.css%3Fver=1716805241.css' media='all' />
 <link rel='stylesheet' id='generate-blog-columns-css' href='../wp-content/plugins/gp-premium/blog/functions/css/columns.min.css%3Fver=2.5.1.css' media='all' />
@@ -90,21 +83,6 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <link rel='stylesheet' id='driftdv-styles-css' href='../wp-content/themes/custom/build/css/style-min.css%3Fver=1.0.css' media='all' />
 <script id="jquery-core-js" src="../wp-includes/js/jquery/jquery.min.js%3Fver=3.7.1"></script>
 <script id="jquery-migrate-js" src="../wp-includes/js/jquery/jquery-migrate.min.js%3Fver=3.4.1"></script>
-<script id="gform_json-js" defer='defer' src="../wp-content/plugins/gravityforms/js/jquery.json.min.js%3Fver=2.10.5"></script>
-<script id="gform_gravityforms-js-extra">
-var gf_global = {"gf_currency_config":{"name":"Pound Sterling","symbol_left":"&#163;","symbol_right":"","symbol_padding":" ","thousand_separator":",","decimal_separator":".","decimals":2,"code":"GBP"},"base_url":"https://www.nextgenplant.co.uk/wp-content/plugins/gravityforms","number_formats":[],"spinnerUrl":"https://www.nextgenplant.co.uk/wp-content/plugins/gravityforms/images/spinner.svg","version_hash":"1496f78f7a9ea05a417f0e24c2664445","strings":{"newRowAdded":"New row added.","rowRemoved":"Row removed","formSaved":"The form has been saved.  The content contains the link to return and complete the form."}};
-var gform_i18n = {"datepicker":{"days":{"monday":"Mo","tuesday":"Tu","wednesday":"We","thursday":"Th","friday":"Fr","saturday":"Sa","sunday":"Su"},"months":{"january":"January","february":"February","march":"March","april":"April","may":"May","june":"June","july":"July","august":"August","september":"September","october":"October","november":"November","december":"December"},"firstDay":1,"iconText":"Select date"}};
-var gf_legacy_multi = {"2":""};
-var gform_gravityforms = {"strings":{"invalid_file_extension":"This type of file is not allowed. Must be one of the following:","file_uploaded":"File uploaded","delete_file":"Delete this file","in_progress":"in progress","file_exceeds_limit":"File exceeds size limit","illegal_extension":"This type of file is not allowed.","max_reached":"Maximum number of files reached","unknown_error":"There was a problem while saving the file on the server","currently_uploading":"Please wait for the uploading to complete","cancel":"Cancel","cancel_upload":"Cancel this upload","cancelled":"Cancelled","error":"Error","message":"Message"},"vars":{"images_url":"https://www.nextgenplant.co.uk/wp-content/plugins/gravityforms/images"}};
-//# sourceURL=gform_gravityforms-js-extra
-</script>
-<script id="gform_gravityforms-js-before">
-
-//# sourceURL=gform_gravityforms-js-before
-</script>
-<script id="gform_gravityforms-js" defer='defer' src="../wp-content/plugins/gravityforms/js/gravityforms.min.js%3Fver=2.10.5"></script>
-<script id="gform_recaptcha-js" defer='defer' src="https://www.google.com/recaptcha/api.js?hl=en&#038;&#038;ver=7.0.2#038;render=explicit"></script>
-<script id="gform_gravityforms_utils-js" defer='defer' src="../wp-content/plugins/gravityforms/assets/js/dist/utils.min.js%3Fver=3f278756f0a3032bed328ff6a9f6c01d"></script>
 <link rel="icon" href="../wp-content/uploads/cropped-site-icon-32x32.png" sizes="32x32" />
 <link rel="icon" href="../wp-content/uploads/cropped-site-icon-192x192.png" sizes="192x192" />
 <link rel="apple-touch-icon" href="../wp-content/uploads/cropped-site-icon-180x180.png" />
@@ -155,7 +133,7 @@ var gform_gravityforms = {"strings":{"invalid_file_extension":"This type of file
 		
 		<div class="entry-content" itemprop="text">
 			<div class="gb-container gb-container-95f47eac gb-container-cont-outer-grey-6" id="contact">
-<div class="gb-container gb-container-ed7c2690 gb-container-cont-inner-gform">
+<div class="gb-container gb-container-ed7c2690 gb-container-cont-inner">
 
 <h2 class="gb-headline gb-headline-c32ec6f3 gb-headline-text">Get in touch</h2>
 
@@ -189,7 +167,6 @@ var gform_gravityforms = {"strings":{"invalid_file_extension":"This type of file
 </style>
 
 <div class="contact-channel-buttons">
-	<!-- Replace the href="#" placeholders below with your Google, LinkedIn and WhatsApp links -->
 	<a class="gb-button gb-button-btn-mb-brand" href="https://maps.app.goo.gl/kaKLMQvqM5oq8TuK7" target="_blank" rel="noopener noreferrer">
 		<span class="gb-icon"><svg aria-hidden="true" role="img" height="1em" width="1em" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="currentColor" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="currentColor" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="currentColor" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></span>
 		<span class="gb-button-text">Google</span>
@@ -332,29 +309,6 @@ var generatepressBackToTop = {"smooth":"1"};
 //# sourceURL=generate-back-to-top-js-extra
 </script>
 <script id="generate-back-to-top-js" src="../wp-content/themes/generatepress/assets/js/back-to-top.min.js%3Fver=3.5.1"></script>
-<script id="wp-dom-ready-js" src="../wp-includes/js/dist/dom-ready.min.js%3Fver=a06281ae5cf5500e9317"></script>
-<script id="wp-hooks-js" src="../wp-includes/js/dist/hooks.min.js%3Fver=7496969728ca0f95732d"></script>
-<script id="wp-i18n-js" src="../wp-includes/js/dist/i18n.min.js%3Fver=781d11515ad3d91786ec"></script>
-<script id="wp-i18n-js-after">
-wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
-//# sourceURL=wp-i18n-js-after
-</script>
-<script id="wp-a11y-js-translations">
-( function( domain, translations ) {
-	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
-	localeData[""].domain = domain;
-	wp.i18n.setLocaleData( localeData, domain );
-} )( "default", {"translation-revision-date":"2026-05-19 18:30:50+0000","generator":"GlotPress\/4.0.3","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=2; plural=n != 1;","lang":"en_GB"},"Notifications":["Notifications"]}},"comment":{"reference":"wp-includes\/js\/dist\/a11y.js"}} );
-//# sourceURL=wp-a11y-js-translations
-</script>
-<script id="wp-a11y-js" src="../wp-includes/js/dist/a11y.min.js%3Fver=af934e5259bc51b8718e"></script>
-<script id="gform_gravityforms_theme_vendors-js" defer='defer' src="../wp-content/plugins/gravityforms/assets/js/dist/vendor-theme.min.js%3Fver=7c651d0ba638ce98b9c65141edddd567"></script>
-<script id="gform_gravityforms_theme-js-extra">
-var gform_theme_config = {"common":{"form":{"honeypot":{"version_hash":"1496f78f7a9ea05a417f0e24c2664445"},"ajax":{"ajaxurl":"https://www.nextgenplant.co.uk/wp-admin/admin-ajax.php","ajax_submission_nonce":"ae5fa55713","i18n":{"step_announcement":"Step %1$s of %2$s, %3$s","unknown_error":"There was an unknown error processing your request. Please try again.","error_403":"The request was blocked (403 error) for unknown security reasons. Remove any code-like text (scripts or DB queries) and try again."}},"product_meta":[],"pagination":{"2":""}}},"hmr_dev":"","public_path":"https://www.nextgenplant.co.uk/wp-content/plugins/gravityforms/assets/js/dist/","config_nonce":"68bf2789e9"};
-//# sourceURL=gform_gravityforms_theme-js-extra
-</script>
-<script id="gform_gravityforms_theme-js" defer='defer' src="../wp-content/plugins/gravityforms/assets/js/dist/scripts-theme.min.js%3Fver=301fdc9aa6144168f3b854c4c2c8f6d3"></script>
 </body>
 </html>
 
-<!-- Page cached by LiteSpeed Cache 7.8.0.1 on 2026-07-18 07:24:40 -->
