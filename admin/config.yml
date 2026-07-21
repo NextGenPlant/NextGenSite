@@ -2,9 +2,7 @@ backend:
   name: github
   repo: NextGenPlant/NextGenSite
   branch: main
-  # Optional: after deploying https://github.com/sveltia/sveltia-cms-auth on Cloudflare Workers,
-  # set base_url to your worker URL so the owner can sign in with GitHub (no personal token).
-  # base_url: https://YOUR-WORKER.workers.dev
+  auth_methods: [token]
 
 # For local editing with `npx decap-server` while `npm start` is running:
 # local_backend: true

@@ -17,23 +17,13 @@ After deploy, open **[https://nextgenplant.co.uk/admin/](https://nextgenplant.co
 
 The editor is [Sveltia CMS](https://sveltiacms.app/). Saving a post commits a Markdown file to `src/whats-new/` on GitHub; the deploy workflow then rebuilds the site.
 
-### Sign in (quick start)
+### Sign in
 
 1. Give the editor **write access** to the `NextGenPlant/NextGenSite` GitHub repo (Collaborator, or org membership with write).
 2. Open `/admin/` → **Sign in with Token**.
 3. Create a fine-grained personal access token with **Contents: Read and write** on this repo only, paste it in, and publish.
 
-The token stays in that browser’s local storage.
-
-### Sign in with GitHub (nicer for non-technical users)
-
-Optional one-time setup (Cloudflare free tier):
-
-1. Deploy [sveltia-cms-auth](https://github.com/sveltia/sveltia-cms-auth) as a Cloudflare Worker.
-2. Create a GitHub OAuth App (Homepage: `https://nextgenplant.co.uk`, callback: `https://YOUR-WORKER.workers.dev/callback`).
-3. Put the Worker URL in `admin/config.yml` as `backend.base_url`, commit, and redeploy.
-
-After that, `/admin/` shows a normal **Login with GitHub** button.
+The token stays in that browser’s local storage. OAuth / “Sign in with GitHub” is disabled in `admin/config.yml` (`auth_methods: [token]`).
 
 ### Local editing without GitHub auth
 
